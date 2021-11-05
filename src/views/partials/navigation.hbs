@@ -1,0 +1,50 @@
+{{#if user}}
+<div class="sticky-top">
+
+<ul class="nav justify-content-end bg-primary text-white bg-gradient">
+  <a class="nav-link active text-white" aria-current="page">Bienvenido! {{user.nombres}}</a>
+  <li class="nav-item ">
+  </li>
+    <li class="nav-item">
+        <a class="nav-link text-white dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Usuarios</a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href=/links/add>Agregar de Usuarios</a></li>
+            <li><a class="dropdown-item" href=/links/listarUsuario>Lista de Usuarios</a></li>
+          </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Paciente</a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href=/links/addPaciente>Agregar de Pacientes</a></li>
+            <li><a class="dropdown-item" href=/links/listarPaciente>Lista de Pacientes</a></li>
+          </ul>
+  </li>
+      <li class="nav-item">
+        <a class="nav-link text-white dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Profeciones</a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href=/links/addProfesion>Agregar de Profeciones</a></li>
+            <li><a class="dropdown-item" href=/links/listarProfesion>Lista de Profeciones</a></li>
+          </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Establecimiento</a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      <li><a class="dropdown-item" href=/links/addEstablecimiento>Agregar Establecimiento</a></li>
+      <li><a class="dropdown-item" href=/links/listarEstablecimiento>Listar Establecimiento</a></li>
+    </ul>
+  </li>
+      
+  <li class="nav-item">
+    <a class="nav-link text-white" href=/profile>Perfil</a>
+  </li>
+  <li class="nav-item"><a class="nav-link"></a></li>
+  <li class="nav-item"><a class="nav-link"></a></li>
+  <li class="nav-item"><a class="nav-link" ></a></li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href=/logout>Cerrar Sesión</a>
+  </li>
+
+</ul>
+
+</div>
+{{/if}}

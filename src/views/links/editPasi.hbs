@@ -1,0 +1,1373 @@
+<form
+  class="row g-3"
+  action="/links/editPasi/{{new_edit_paci.id_paciente}}"
+  method="POST"
+  style="margin-top: 2.5%;"
+  style="margin-bottom: 3%;"
+>
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+<h3 > Datos Del Paciente</h3>
+
+          <!-- _____________________________Datos del paciente__________________________________ -->
+
+          <div class="row">
+
+            <div class="col-md-6">
+              <label class="form-label">Rut</label>
+              <input
+              value="{{new_edit_paci.rut}}"
+                type="text"
+                class="form-control"
+                id="rut"
+                name="rut"
+                required
+                placeholder="18.333.444-2"
+              />
+
+            </div>
+            
+            <div class="col-md-6">
+              <label class="form-label">Apellido y Nombre</label>
+              <input
+              value="{{new_edit_paci.nombre}}"
+                type="text"
+                class="form-control"
+                name="nombre"
+                required
+                placeholder="Scarlazzetta Daniel"
+              />
+
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Fecha Nacimiento</label>
+              <input
+              value="{{new_edit_paci.fecha_nacimiento}}"
+                type="text"
+                class="form-control"
+                id="fecha_nacimiento"
+                name="fecha_nacimiento"
+              />
+            </div>
+            
+            
+            <div class="col-md-6">
+              <label class="form-label">Edad</label>
+              <h1
+              value="{{new_edit_paci.edad}}"
+                type="text"
+                class="form-control"
+                id="edad_"
+                name="edad"
+                >
+                </h1>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Sexo</label>
+              <select id="sexo" name="sexo" class="form-select">
+                
+                <option value="Femenino">Femenino</option>
+                <option value="Masculino">Masculino</option>
+                <option selected value="{{new_edit_paci.sexo}}">{{new_edit_paci.sexo}}</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Números de Teléfono</label>
+              <input
+              value="{{new_edit_paci.telefono}}"
+                type="text"
+                class="form-control"
+                name="telefono"
+                placeholder="+56942896003 - +56942896030"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label
+                for="inputCentromedico"
+                class="form-label"
+              >¿Paciente Postrado?
+              </label>
+              <select name="paciente_postrado" class="form-select">
+                
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option selected value="{{new_edit_paci.paciente_postrado}}">{{new_edit_paci.paciente_postrado}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">¿Pueblos
+                Indigenas?</label>
+              <select
+                name="participa_pueblos_originarios"
+                class="form-select"
+              >
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.participa_pueblos_originarios}}">{{new_edit_paci.participa_pueblos_originarios}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label
+                class="form-label"
+              >Inmigrante?</label>
+              <select name="poblacion_inmigrante" class="form-select">
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.poblacion_inmigrante}}">{{new_edit_paci.poblacion_inmigrante}}</option> 
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Número de carpeta
+                familiar</label>
+              <input
+              value="{{new_edit_paci.plan_familiar}}"
+                type="text"
+                class="form-control"
+                name="plan_familiar"
+                placeholder="1182"
+              />
+            </div>
+            
+            
+            <div class="col-md-6">
+              <label class="form-label">Presión S</label>
+              <input
+              value="{{new_edit_paci.presion_s}}"
+                type="text"
+                class="form-control"
+                name="presion_s"
+                placeholder="180"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Presión D</label>
+              <input
+              value="{{new_edit_paci.presion_d}}"
+                type="text"
+                class="form-control"
+                name="presion_d"
+                placeholder="160"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="inputApellidos" class="form-label">Fecha De toma de
+                Presión</label>
+              <input
+              value="{{new_edit_paci.fecha_PA}}"
+                type="date"
+                class="form-control"
+                name="fecha_PA"
+              />
+            </div>
+            <div class="col-md-6">
+              <label
+                class="form-label"
+              >Adulto Mayor solo con/sin redes de apoyo</label>
+              <select name="AM_SOLO_C_R" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Sin apoyo">AM SOLO S/R</option>
+                <option value="Con apoyo">AM SOLO C/R</option>
+                <option value="{{new_edit_paci.AM_SOLO_C_R}}">{{new_edit_paci.AM_SOLO_C_R}}</option>
+
+              </select>
+            </div>
+
+          </div>
+          <!-- ____________________________fin datos del paciente_____________________________ -->
+
+<h2>IMC</h2>
+
+
+          <!-- ______________________________IMC_____________________________ -->
+            
+          <div class="row">
+            
+
+            <div class="col-md-6">
+              <label for="inputApellidos" class="form-label">Peso</label>
+              <input
+              value="{{new_edit_paci.peso}}"
+                type="text"
+                class="form-control"
+                id="peso"
+                name="peso"
+                placeholder="70"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="inputApellidos" class="form-label">Talla</label>
+              <input
+              value="{{new_edit_paci.talla}}"
+                type="text"
+                class="form-control"
+                id="talla"
+                name="talla"
+                placeholder="1,50"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="inputApellidos" class="form-label">IMC</label>
+              <h1
+              value="{{new_edit_paci.imc}}"
+                type="text"
+                class="form-control"
+                id="imc"
+                name="imc"
+               >25,5
+              </h1>
+                 
+            </div>
+
+            <div class="col-md-6">
+              <label for="inputApellidos" class="form-label">Estado Nutricional</label>
+              <h1
+              value="{{new_edit_paci.estado_nutricional}}"
+                type="text"
+                class="form-control"
+                id="estado_nutricional"
+                name="estado_nutricional"
+               >
+              </h1>
+                 
+            </div>
+
+          </div>
+          
+
+          
+          <!-- ____________________________fin IMC_____________________________ -->
+<h2>Factores de riesgo</h2>
+ 
+ 
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.TAB}}"
+                  name="TAB"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  TAB
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.OBES}}"
+                  name="OBES"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  OBES
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.SEDENT}}"
+                  name="SEDENT"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  SEDENT
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.Antec_IAM}}"
+                  name="Antec_IAM"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Antec IAM
+                </label>
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.antec_enf_CV}}"
+                  name="antec_enf_CV"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Antec enf CV
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.tto_con_aspirina}}"
+                  name="tto_con_aspirina"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  TTo con Aspirina
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.tto_con_estatina}}"
+                  name="tto_con_estatina"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  TTo con Estatina
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.TACO}}"
+                  name="TACO"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  TACO
+                </label>
+              </div>
+            </div>
+
+          </div>
+          <!-- ______________________________fin________________________-->
+     
+     <h2>Rescate de Paciente</h2>
+
+       
+
+          <!-- ______________________________fin________________________-->
+
+          <div class="row">
+
+            <div class="col-md-6">
+              <label for="datetime-local" class="form-label">Fecha y hora de
+                rescate</label>
+              <input
+              value="{{new_edit_paci.fecha_rescate}}"
+                type="datetime-local"
+                name="fecha_rescate"
+                class="form-control"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Rescate Telefónico Efectivo</label>
+              <select name="rescate_telefonico_efectivo" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.rescate_telefonico_efectivo}}">{{new_edit_paci.rescate_telefonico_efectivo}}</option>
+              </select>
+
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Rescate Domiciliario Efectivo</label>
+              <select name="rescate_domiciliario_efectivo" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.rescate_domiciliario_efectivo}}">{{new_edit_paci.rescate_domiciliario_efectivo}}</option>
+              </select>
+
+            </div>
+
+
+          </div>
+
+          <!-- ______________________________fin________________________-->
+
+<h2>Atención realizada por Médico, Enfermera, Nutricionista</h2>
+  
+
+          <!---->
+          <div class="row">
+
+            <div class="col-md-6">
+              <label class="form-label">Fecha de control</label>
+              <input
+              value="{{new_edit_paci.ultimo_control}}"
+                type="datetime-local"
+                name="ultimo_control"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">EST</label>
+              <input
+              value="{{new_edit_paci.est}}"
+                type="text"
+                class="form-control"
+                id="est"
+                name="est"
+                placeholder="1"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Último Control Pres/tel</label>
+              <select name="ultimo_control_presenc_tel" class="form-select">
+
+                <option selected>Elija una opcion</option>
+                <option value="Presencial">Presencial</option>
+                <option value="Telefonico">Telefonico</option>
+                <option value="{{new_edit_paci.ultimo_control_presenc_tel}}">{{new_edit_paci.ultimo_control_presenc_tel}}</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Próximo Control</label>
+              <input
+              value="{{new_edit_paci.proximo_control}}"
+                type="date"
+                name="proximo_control"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Proximo
+                profesional a cargo</label>
+              <select name="proximo_profesional" class="form-select">
+
+                <option selected>Elija una opcion</option>
+                <option value="Médico">Médico</option>
+                <option value="Enfermera">Enfermera</option>
+                <option value="Nutricionista">Nutricionista</option>
+                <option value="{{new_edit_paci.proximo_profesional}}">{{new_edit_paci.proximo_profesional}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Último control a distancia</label>
+              <input
+              value="{{new_edit_paci.ultimo_control_a_distancia}}"
+                type="date"
+                name="ultimo_control_a_distancia"
+                class="form-control"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Control a Distancia Efectivo</label>
+              <select name="control_a_distancia_efectivo" class="form-select">
+
+                <option selected>Elija una opcion</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.control_a_distancia_efectivo}}">{{new_edit_paci.control_a_distancia_efectivo}}</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Profecional
+                Atencion a Distancia</label>
+              <select
+                name="profesional_que_realizo_aten_dist"
+                class="form-select"
+              >
+                <option selected>Elija una opcion</option>
+                <option value="Médico">Médico</option>
+                <option value="Enfermera">Enfermera</option>
+                <option value="Nutricionista">Nutricionista</option>
+                <option value="{{new_edit_paci.profesional_que_realizo_aten_dist}}">{{new_edit_paci.profesional_que_realizo_aten_dist}}</option>
+              </select>
+            </div>
+            
+          </div>
+          <!---->
+ 
+<h2>Atención Químicos Farmacéuticos</h2>
+
+          <div class="row">
+
+            <div class="col-md-12">
+              <label for="inputProfesionlACargo" class="form-label">Derivado a
+                Químico Farmacéutico</label>
+              <select name="derivado_a_QF" class="form-select">
+                <option selected>Elija una opción</option>
+                <option value="Si">Derivado con exito</option>
+                <option value="No">Sin derivar</option>
+                <option value="{{new_edit_paci.derivado_a_QF}}">{{new_edit_paci.derivado_a_QF}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Químico Farmacéutico
+                Presencial</label>
+              <input
+              value="{{new_edit_paci.q_farmac_presencial}}"
+                type="date"
+                name="q_farmac_presencial"
+                class="form-control"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <labelclass="form-label">Fecha de
+                atención a distancia</label>
+              <input
+              value="{{new_edit_paci.fecha_atencion_a_distancia}}"
+                type="date"
+                name="fecha_atencion_a_distancia"
+                class="form-control"
+              />
+            </div>
+
+              <div class="col-md-6">
+              <label class="form-label">Atención a Distancia</label>
+              <select name="atencion_a_distancia" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.atencion_a_distancia}}">{{new_edit_paci.atencion_a_distancia}}</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Próximo Control Químico Farmacéutico</label>
+              <input
+              value="{{new_edit_paci.Proximo_control_Q_farmaceutico}}"
+                type="date"
+                name="Proximo_control_Q_farmaceutico"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Fecha Citación</label>
+              <input
+              value="{{new_edit_paci.fecha_citacion}}"
+                type="date"
+                name="fecha_citacion"
+                class="form-control"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Via Citación</label>
+              <select name="via_citacion" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Some">Some</option>
+                <option value="Telefónico">Telefónico </option>
+                <option value="No Contactado">No contactado</option>
+                <option value="{{new_edit_paci.via_citacion}}">{{new_edit_paci.via_citacion}}</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Confirmación
+                de Cita</label>
+              <select name="confirmacion_de_cita" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Confirmado">Confirmado</option>
+                <option value="No Confirmado">No confirma</option>
+                <option value="{{new_edit_paci.confirmacion_de_cita}}">{{new_edit_paci.confirmacion_de_cita}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label
+                for="inputProfesionlACargo"
+                class="form-label"
+              >Asistió</label>
+              <select name="inasistencia" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.inasistencia}}">{{new_edit_paci.inasistencia}}</option>
+              </select>
+            </div>
+
+          </div>
+          <!--______________________________________________________-->
+
+<h2>Existencia de Paciente (Patología)</h2>
+
+          <div class="row">
+
+            <div class="col-md-6">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.hta}}"
+                  name="hta"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  HTA hipertensión arterial
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.DM}}"
+                  name="DM"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  DM
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.DLP}}"
+                  name="DLP"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  DLP
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.HipoT}}"
+                  name="HipoT"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  HipoT
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.Park}}"
+                  name="Park"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Park
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.Epil}}"
+                  name="Epil"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Epil
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.Glauc}}"
+                  name="Glauc"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Glauc
+                </label>
+              </div>
+              
+
+            </div>
+
+            <div class="col-md-6">
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.GAA}}"
+                  name="GAA"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  GAA
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.INT_GLUC}}"
+                  name="INT_GLUC"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  INT. GLUC
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.INS_RESIST}}"
+                  name="INS_RESIST"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  INS RESIST.
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.Alzh}}"
+                  name="Alzh"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Alzh
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="{{new_edit_paci.Otras_patologias}}"
+                  name="Otras_patologias"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Otras Patologías
+                </label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label
+                for="inputProfesionlACargo"
+                class="form-label"
+              >Artrosis</label>
+              <select name="Artrosis" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Cadera">Cadera</option>
+                <option value="Rodilla">Rodilla</option>
+                <option value="Ambas">Ambas</option>
+                <option value="Ninguna">Ninguna</option>
+                <option value="{{new_edit_paci.Artrosis}}">{{new_edit_paci.Artrosis}}</option>
+
+              </select>
+            </div>
+            
+          </div>
+          <!--________________________________________________________-->
+
+<h2>Diabetes</h2>
+
+
+          <div class="row">
+
+            <div class="col-md-6">
+              <label class="form-label">Fecha de Hb</label>
+              <input
+              value="{{new_edit_paci.Hb}}"
+                type="date"
+                name="Hb"
+                class="form-control"
+              />
+            </div>
+            
+            <div class="col-md-6">
+              <label class="form-label">Valor H. Glicos</label>
+              <input
+              value="{{new_edit_paci.valor_H_Glicos}}"
+                class="form-control"
+                name="valor_H_Glicos"
+                placeholder="130"
+              />
+            </div>
+          </div>
+
+          <!--______-->
+
+<h2>Colesterol</h2>
+
+          <!--_____________________-->
+          <div class="row">
+
+            <div class="col-md-6">
+              <label for="datetime-local" class="form-label">Fecha de la
+                Toma de Control</label>
+              <input
+              value="{{new_edit_paci.fecha}}"
+                type="date"
+                name="fecha"
+                class="form-control"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Total</label>
+              <input
+              value="{{new_edit_paci.total}}"
+                class="form-control"
+                name="total"
+                placeholder="150"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label  class="form-label">L.D.L</label>
+              <input  
+              value="{{new_edit_paci.LDL}}"
+              class="form-control"
+              name="LDL" 
+              />
+            </div>
+            
+          </div>
+          <!--_____________________-->
+
+<h2>Fondo de Ojo</h2>
+
+  
+          <div class="row">
+
+            <div class="col-md-6">
+              <label for="date" class="form-label">Control de fondo de ojo</label>
+              <input
+              value="{{new_edit_paci.fecha_fondo_ojo}}"
+                type="date"
+                name="fecha_fondo_ojo"
+                class="form-control"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label for="inputRescate" class="form-label">Resultado</label>
+              <select name="resultado" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="S/RD">S/RD</option>
+                <option value="C/RD">C/RD</option>
+                <option value="{{new_edit_paci.resultado}}">{{new_edit_paci.resultado}}</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label for="date" class="form-label">Próximo control de Fondo de
+                ojo</label>
+              <input
+              value="{{new_edit_paci.proximo_fondo_de_ojo}}"
+                type="date"
+                name="proximo_fondo_de_ojo"
+                class="form-control"
+              />
+            </div>
+
+          </div>
+          <!--_____________-->
+  
+  <h2>Pie Diabetico</h2>
+
+  
+          <div class="row">
+
+            <div class="col-md-6">
+              <label for="date" class="form-label">Control Pie Diabetico</label>
+              <input
+              value="{{new_edit_paci.fecha_pie_diabetico}}"
+                type="date"
+                name="fecha_pie_diabetico"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md-6">
+              <label  class="form-label">Riesgo</label>
+              <select name="riesgo_pie_diabetico" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Bajo">Bajo</option>
+                <option value="Moderado">Moderado</option>
+                <option value="Alto">Alto</option>
+                <option value="Máximo">Máximo</option>
+                <option value="{{new_edit_paci.riesgo_pie_diabetico}}">{{new_edit_paci.riesgo_pie_diabetico}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label  class="form-label">Curacion</label>
+              <select name="curacion_pie_diabetico" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Conv">Conv</option>
+                <option value="Av">Av</option>
+                <option value="{{new_edit_paci.curacion_pie_diabetico}}">{{new_edit_paci.curacion_pie_diabetico}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label  class="form-label">Fecha inicio de curacion</label>
+              <input
+              value="{{new_edit_paci.fecha_inicio_curacion}}"
+                type="date"
+                name="fecha_inicio_curacion"
+                class="form-control"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label  class="form-label">Fecha Termino de curacion</label>
+              <input
+              value="{{new_edit_paci.fecha_termino_curacion}}"
+                type="date"
+                name="fecha_termino_curacion"
+                class="form-control"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Cuenta Con Amputación</label>
+              <select name="amput" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.amput}}">{{new_edit_paci.amput}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">En caso de tener
+                algún tipo de amputación</label>
+              <select name="tipo_amputacion" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Ninguna">Ninguna</option>
+                <option value="Transmetatarsiana">Transmetatarsiana</option>
+                <option value="Infrarotuliana">Infrarotuliana</option>
+                <option value="Suprarotuliana">Suprarotuliana</option>
+                <option value="Otra">Otra</option>
+                <option value="{{new_edit_paci.tipo_amputacion}}">{{new_edit_paci.tipo_amputacion}}</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Fecha Amputación</label>
+              <input 
+              value="{{new_edit_paci.fecha_amutacion}}"
+              type="date"
+              name="fecha_amutacion"
+              class="form-control" />
+            </div>
+
+          </div>
+          <!---_______________________________________-->
+
+<h2>Podologo</h2>
+
+          <div class="row">
+
+            <div class="col-md-6">
+              <label  class="form-label">Control Podologo</label>
+              <select name="control_podologo" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.control_podologo}}">{{new_edit_paci.control_podologo}}</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Fecha Podologo</label>
+              <input
+               value="{{new_edit_paci.fecha_podologo}}"
+              type="date"
+              name="fecha_podologo"
+              class="form-control" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Fecha Atención Telefónica
+                Podologo</label>
+              <input
+              value="{{new_edit_paci.fecha_atencion_telefonica_podologo}}"
+                type="date"
+                name="fecha_atencion_telefonica_podologo"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md-6">
+              <label  class="form-label">Atención Telefónica Efectiva</label>
+              <select name="atencion_telefonica_efectiva" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.atencion_telefonica_efectiva}}">{{new_edit_paci.atencion_telefonica_efectiva}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Próximo Control de Podologo</label>
+              <input
+              value="{{new_edit_paci.proximo_control_podogolo}}"
+                type="date"
+                name="proximo_control_podogolo"
+                class="form-control"
+              />
+            </div>
+
+          </div>
+          <!--____________________________-->
+
+<h2>P5</h2>
+<!--____________________________-->
+          <div class="row">
+          <!---____________________________________________-->
+          <div class="col-md-6">
+              <label for="inputRescate" class="form-label">Prog MAS P5</label>
+              <select name="prog_mas" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.prog_mas}}">{{new_edit_paci.prog_mas}}</option>
+              </select>
+            </div>
+
+             <div class="col-md-6">
+              <label class="form-label">Fecha P5</label>
+              <input
+              value="{{new_edit_paci.fecha_P5}}"
+                type="date"
+                name="fecha_P5"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="inputRescate" class="form-label">EMPAM</label>
+              <select name="EMPAM" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="AutoV S/R">AutoV S/R</option>
+                <option value="AutoV C/R">AutoV C/R</option>
+                <option value="Riesgo Dep">Riesgo Dep</option>
+                <option value="{{new_edit_paci.EMPAM}}">{{new_edit_paci.EMPAM}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="inputRescate" class="form-label">Time up and Go</label>
+              <select name="time_up_and_go" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Leve">Leve</option>
+                <option value="Normal">Normal</option>
+                <option value="Alto">Alto</option>
+                <option value="{{new_edit_paci.time_up_and_go}}">{{new_edit_paci.time_up_and_go}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Estación Unipodal</label>
+              <select name="estacion_unipodal" class="form-select">
+                <option selected>Elija una opción</option>
+                <option value="Normal">Normal</option>
+                <option value="Alterado">Alterado</option>
+                <option value="{{new_edit_paci.estacion_unipodal}}">{{new_edit_paci.estacion_unipodal}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Minimental</label>
+              <select name="Minimental" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Normal">Normal</option>
+                <option value="Alterado">Alterado</option>
+                <option value="{{new_edit_paci.Minimental}}">{{new_edit_paci.Minimental}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Índice barthel</label>
+              <select name="indice_barthel" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Leve">Leve</option>
+                <option value="Moderado">Moderado</option>
+                <option value="Grave">Grave</option>
+                <option value="Total">Total</option>
+                <option value="{{new_edit_paci.indice_barthel}}">{{new_edit_paci.indice_barthel}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Dependencia Severa</label>
+              <select name="dependencia_severa" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Oncologica">Oncologica</option>
+                <option value="No Oncologica">No Oncologica</option>
+                <option value="{{new_edit_paci.dependencia_severa}}">{{new_edit_paci.dependencia_severa}}</option>
+              </select>
+            </div>
+            
+            <div class="col-md-6">
+              <label class="form-label">Escaras</label>
+              <select name="escaras" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.escaras}}">{{new_edit_paci.escaras}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="inputRescate" class="form-label">Sospecha Maltrato</label>
+              <select name="sospecha_maltrato" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.sospecha_maltrato}}">{{new_edit_paci.sospecha_maltrato}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="inputRescate" class="form-label">Actividad Fisica</label>
+              <select name="actividad_fisica" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.actividad_fisica}}">{{new_edit_paci.actividad_fisica}}</option>
+              </select>
+            </div>
+            
+          <!---____________________________________________-->
+          </div>
+<!--____________________________-->
+
+<h2>Programa de Salud Mental</h2>
+<!--____________________________-->
+          <div class="row">
+            <div class="col-md-6">
+              <label class="form-label">Transtorno del Humor</label>
+              <select name="trans_del_humor" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="DL">DL</option>
+                <option value="DM">DM</option>
+                <option value="DG">DG</option>
+                <option value="DPP">DPP</option>
+                <option value="T.Bipolar">T.Bipolar</option>
+                <option value="Ninguna">Ninguna</option>
+                <option value="{{new_edit_paci.trans_del_humor}}">{{new_edit_paci.trans_del_humor}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Sustancias Psicotropicas</label>
+              <select name="sus_psicotropicas" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="OH">OH</option>
+                <option value="Drogas">Drogas</option>
+                <option value="Ninguna">Ninguna</option>
+                <option value="{{new_edit_paci.sus_psicotropicas}}">{{new_edit_paci.sus_psicotropicas}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="inputRescate" class="form-label">Transtorno de Comportamiento</label>
+              <select name="transt_comport" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="OTC">OTC</option>
+                <option value="TAI">TAI</option>
+                <option value="TH">TH</option>
+                <option value="TOD">TOD</option>
+                <option value="Ninguna">Ninguna</option>
+                <option value="{{new_edit_paci.transt_comport}}">{{new_edit_paci.transt_comport}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="inputRescate" class="form-label">Transtorno de Ansiedad</label>
+              <select name="trans_ansiedad" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.trans_ansiedad}}">{{new_edit_paci.trans_ansiedad}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="inputRescate" class="form-label">Otras Demencias</label>
+              <select name="otras_demencias" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Leve">Leve</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Avanzada">Avanzada</option>
+                <option value="Ninguna">Ninguna</option>
+                <option value="{{new_edit_paci.otras_demencias}}">{{new_edit_paci.otras_demencias}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="inputRescate" class="form-label">Esquizofrenia</label>
+              <select name="esquizofrenia" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.esquizofrenia}}">{{new_edit_paci.esquizofrenia}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="inputRescate" class="form-label">Transtorno Alimentaria</label>
+              <select name="transt_alimentaria" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.transt_alimentaria}}">{{new_edit_paci.transt_alimentaria}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="inputRescate" class="form-label">Retraso Mental</label>
+              <select name="retraso_mental" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.retraso_mental}}">{{new_edit_paci.retraso_mental}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="inputRescate" class="form-label">Transtorno Personalidad</label>
+              <select name="transt_personalidad" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.transt_personalidad}}">{{new_edit_paci.transt_personalidad}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="inputRescate" class="form-label">Transtorno Generalizado Del Desarrollo</label>
+              <select name="transt_generalizado_del_desarrollo" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.transt_generalizado_del_desarrollo}}">{{new_edit_paci.transt_generalizado_del_desarrollo}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="inputRescate" class="form-label">Otras</label>
+              <select name="otras_programa_salud_mental" class="form-select">
+
+                <option selected>Elija una opción</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="{{new_edit_paci.otras_programa_salud_mental}}">{{new_edit_paci.otras_programa_salud_mental}}</option>
+              </select>
+            </div>
+            
+
+
+          </div>
+<!--____________________________-->
+
+
+
+  </div>
+  <div class="col-md-12" style="margin-bottom: 3%;">
+    <button type="submit" class="btn btn-primary">Añadir paciente</button>
+  </div>
+</form>
+
+
+<script>
+  //funcion para calcular edad, y completar el campo de imc con la edad conrrespondiente
+  const fecha_nacimiento = document.getElementById("fecha_nacimiento");
+  const edad_ = document.getElementById("edad_");
+  
+
+  const calcularedad = (fecha_nacimiento) =>{
+
+    const fechaActual = new Date();
+    const anoActual = parseInt(fechaActual.getFullYear());
+    const mesActual = parseInt(fechaActual.getMonth() + 1);
+    const diaActual = parseInt(fechaActual.getDay());
+    //format 2021-12-22
+    const anoNaciemiento = parseInt(String(fecha_nacimiento).substring(0, 4));
+    const mesNaciemiento = parseInt(String(fecha_nacimiento).substring(5, 7));
+    const diaNaciemiento = parseInt(String(fecha_nacimiento).substring(8, 10));
+    let edad_ = anoActual - anoNaciemiento;
+    if(mesActual < mesNaciemiento){
+      edad_--;
+    }else if(mesActual === mesNaciemiento){
+      if(diaActual < diaNaciemiento){
+        edad_--;
+      }
+    }
+    return edad_;
+    console.log(edad_);
+  };
+
+    window.addEventListener('load', function(){
+    fecha_nacimiento.addEventListener('change', function(){  
+      if(this.value){
+        edad_.innerText = calcularedad(this.value);
+        console.log(edad_);
+        //edad.innerText = calcularedad(this.value);
+      }
+    });
+  });
+
+//-------------------------------------
+
+//--------------------------------------
+
+//funcion para calcular el IMC y llenar el campo de Estado nutricional
+
+const calculo_imc = () =>{
+
+  var peso = parseInt(document.getElementById("peso").value);
+  var talla = parseInt(document.getElementById("talla").value);
+  var imc = parseInt(document.getElementById("imc"));
+  var estado_nutricional = document.getElementById("estado_nutricional");
+
+    if(peso != 0 && talla != 0 ){
+
+      talla = parseInt(talla)/100;
+      imc = parseInt( peso / ( talla * talla));
+      //imc.innerHTML = imc.toFixed(2);
+
+      if(imc < 16){
+        console.log("Delgadez Severa");
+         estado_nutricional.innerHTML = "Delgadez Severa";
+      }
+      if(imc < 16.99 && imc > 16.01){
+        console.log("Delgadez moderada");
+        estado_nutricional.innerHTML = "Delgadez Moderada";
+      }
+      if(imc <18.49 && imc >17){
+        console.log("Delgadez Aceptable");
+        estado_nutricional.innerHTML = "Delgadez Aceptable";
+      }
+      if(imc < 24.99 && imc > 18.5){
+        console.log("Normal");
+        estado_nutricional.innerHTML = "Normal";
+      }
+      if(imc > 25.5){
+        console.log("sobre peso");
+        estado_nutricional.innerHTML = "Sobre Peso";
+      }
+
+    };
+  return imc;
+}
+
+window.addEventListener("load", function(){
+  talla.addEventListener("change", function(){
+    if(this.value){
+
+        imc.innerText = calculo_imc(this.value);
+        console.log(imc);
+      }
+  });
+  imc.addEventListener("change", function(){
+    if(this.value){
+
+        estado_nutricional.innerText = calculo_imc(this.value);
+        console.log(estado_nutricional);
+      }
+  });
+});
+</script>

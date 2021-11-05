@@ -1,0 +1,111 @@
+<form class="row g-3" style="margin-top: 3%;">
+
+  <div class="col-md-6">
+    <label for="inputNombres" class="form-label">Nombres</label>
+    <label
+      type="text"
+      class="form-control"
+      name="nombres"
+      id="nombres"
+      autofocus=""
+      placeholder="Juan"
+    />{{user.nombres}}
+  </div>
+  <div class="col-md-6">
+    <label for="inputApellidos" class="form-label">Apellidos</label>
+    <label
+      type="text"
+      class="form-control"
+      name="apellidos"
+      id="apellidos"
+      placeholder="Perez"
+    />{{user.apellidos}}
+
+  </div>
+
+  <div class="col-md-4">
+    <label for="inputRut" class="form-label">Rut</label>
+    <label
+      type="text"
+      class="form-control"
+      name="rut"
+      id="rut"
+      minlength="5"
+      maxlength="10"
+      placeholder="12.345.678"
+    />{{user.rut}}
+  </div>
+
+  <div class="col-md-2">
+    <label for="numero_verificador" class="form-label">N° Verificador</label>
+    <label
+      type="text"
+      class="form-control"
+      name="numero_verificador"
+      id="numero_verificador"
+    />{{user.numero_verificador}}
+
+  </div>
+
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Correo Electronico</label>
+    <label
+      type="email"
+      class="form-control"
+      name="email"
+      id="email"
+    />{{user.email}}
+  </div>
+
+
+  <div class="col-md-6">
+    <label for="numero_telefonico" class="form-label">Teléfono</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon3">+56 9</span>
+      <label
+        type="text"
+        class="form-control"
+        name="numero_telefonico"
+        id="numero_telefonico"
+        aria-describedby="basic-addon3"
+      />{{user.numero_telefonico}}
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <label for="numero_telefonico_respaldo" class="form-label">Teléfono respaldo</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon3">+56 9</span>
+      <label
+        type="text"
+        class="form-control"
+        name="numero_telefonico_respaldo"
+        id="numero_telefonico_respaldo"
+        aria-describedby="basic-addon3"
+      />{{user.numero_telefonico_respaldo}}
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <label for="inputAddress" class="form-label">Dirección</label>
+    <label
+      type="text"
+      class="form-control"
+      name="direccion"
+      id="direccion"
+    />{{user.direccion}}
+  </div>
+  <div class="col-md-4">
+    <label for="inputNumero" class="form-label">Número de Casa</label>
+    <label
+      type="number"
+      class="form-control"
+      name="numero_direccion"
+      id="numero_direccion"
+      placeholder="#1189"
+      minlength="1"
+      maxlength="6"
+    />{{user.numero_direccion}}
+  </div>
+
+</form>

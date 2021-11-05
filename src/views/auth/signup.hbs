@@ -1,0 +1,235 @@
+<form class="row g-3" action="/signup" method="POST" style="margin-top: 3%;">
+ 
+  <div class="col-md-6">
+    <label for="inputNombres" class="form-label">Nombres</label>
+    <input
+      type="text"
+      class="form-control"
+      name="nombres"
+      id="nombres"
+      minlength="5"
+      maxlength="45"
+      required
+      autofocus=""
+      placeholder="Juan"
+    />
+  </div>
+  <div class="col-md-6">
+    <label for="inputApellidos" class="form-label">Apellidos</label>
+    <input
+      type="text"
+      class="form-control"
+      name="apellidos"
+      id="apellidos"
+      minlength="5"
+      maxlength="45"
+      required
+      placeholder="Perez"
+    />
+
+  </div>
+
+  <div class="col-md-4">
+    <label for="inputRut" class="form-label">Rut</label>
+    <input
+      type="text"
+      class="form-control"
+      name="rut"
+      id="rut"
+      minlength="5"
+      maxlength="10"
+      required
+      pattern="[0-9]*"
+      placeholder="12.345.678"
+    />
+  </div>
+
+  <div class="col-md-2">
+    <label for="numero_verificador" class="form-label">N° Verificador</label>
+    <input
+      type="text"
+      class="form-control"
+      name="numero_verificador"
+      id="numero_verificador"
+      maxlength="1"
+      required
+      placeholder="9"
+    />
+
+  </div>
+
+  <div class="col-md-6">
+    <label class="form-label">Correo Electronico</label>
+    <input
+      type="email"
+      class="form-control"
+      name="email"
+      id="email"
+      minlength="5"
+      maxlength="40"
+      required
+      placeholder="JuanPerez@Parral.cl"
+    />
+  </div>
+
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Contraseña</label>
+    <input
+      type="password"
+      class="form-control"
+      name="pass"
+      id="pass"
+      minlength="8"
+      maxlength="20"
+      required
+      placeholder="***********"
+    />
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Confirmar Contraseña</label>
+    <input
+      type="password"
+      class="form-control"
+      name="pass2"
+      id="pass2"
+      minlength="5"
+      maxlength="20"
+      required
+      placeholder="***********"
+    />
+  </div>
+
+  <div class="col-md-6">
+    <label for="numero_telefonico" class="form-label">Teléfono</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon3">+56 9</span>
+      <input
+        type="text"
+        class="form-control"
+        name="numero_telefonico"
+        id="numero_telefonico"
+        aria-describedby="basic-addon3"
+      />
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <label for="numero_telefonico_respaldo" class="form-label">Teléfono respaldo</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon3">+56 9</span>
+      <input
+        type="text"
+        class="form-control"
+        name="numero_telefonico_respaldo"
+        id="numero_telefonico_respaldo"
+        aria-describedby="basic-addon3"
+      />
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <label for="inputAddress" class="form-label">Dirección</label>
+    <input
+      type="text"
+      class="form-control"
+      name="direccion"
+      id="direccion"
+      placeholder="Avenida anibal pinto"
+      minlength="5"
+      maxlength="45"
+      required
+    />
+  </div>
+  <div class="col-md-4">
+    <label for="inputNumero" class="form-label">Número de Casa</label>
+    <input
+      type="number"
+      class="form-control"
+      name="numero_direccion"
+      id="numero_direccion"
+      placeholder="#1189"
+      minlength="1"
+      maxlength="6"
+      required
+    />
+  </div>
+
+  <div class="col-md-6">
+    <label for="id_profesion" class="form-label">Profesión</label>
+    <select name="id_profesion" id="id_profesion" class="form-select">
+
+      <option selected>Elija una...</option>
+      <option value="1">MEDICO</option>
+      <option value="2">ENFERMARA(O)</option>
+      <option value="3">PSCICOLOGO</option>
+      <option value="4">KINESIOLOGO</option>
+      <option value="5">NUTRICIONISTA</option>
+      <option value="6">ODONTOLOGO</option>
+      <option value="7">MATRON(A)</option>
+      <option value="8">ASISTENTE SOCIAL</option>
+      <option value="9">TECNOLOGO MEDICO</option>
+      <option value="10">PROFESIONES NO FORMALES</option>
+      <option value="11">TERAPEUTA OCUPACIONAL</option>
+      <option value="12">TECNICO ENFERMERIA N. S</option>
+      <option value="13">LABORATISTA DENTAL</option>
+      <option value="14">TECNICOS EN SALUD</option>
+      <option value="15">QUIMICO FARMACEUTICO</option>
+      <option value="16">PROFESOR DE EDUCACION FISICA</option>
+      <option value="17">EDUCADORA DE PARVULOS</option>
+      <option value="18">ASISTENTE DE PARVULO</option>
+      <option value="19">PODOLOGO(A)</option>
+      <option value="20">ASISTENTE TECNICO DENTAL</option>
+      <option value="21">FONOAUDIOLOGO(A)</option>
+      <option value="22">HIGIENISTA DENTAL</option>
+      
+
+    </select>
+  </div>
+
+
+  <div class="col-md-12" style="margin-bottom: 4%;">
+    <button type="submit" class="btn btn-primary">Añadir usuario</button>
+  </div>
+
+  <div class="col-md-12" style="margin-bottom: 4%;">
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Añadir Usuario
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          ¿Desea guardar los datos?
+        </div>
+        <div class="modal-footer">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+          >Si</button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-bs-dismiss="modal"
+          >no</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</form>

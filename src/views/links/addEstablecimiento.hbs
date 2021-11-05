@@ -1,0 +1,35 @@
+<form class="row g-3" action="/links/addEstablecimiento" method="POST" style="margin-top: 3%;">
+<div class="col-md-6">
+  <label for="inputApellidos" class="form-label">Indique el nombre del establecimiento</label>
+  <input
+    type="text"
+    class="form-control"
+    id="nombre_establecimiento"
+    name="nombre_establecimiento"
+    minlength="5"
+    maxlength="45"
+    required
+    placeholder="CESFAM Arrau Méndez"
+  />
+
+</div>
+
+<div class="col-md-6">
+  <label for="inputApellidos" class="form-label">Direccipón del establecimiento</label>
+  <input
+    type="text"
+    class="form-control"
+    id="direccion_establecimiento"
+    name="direccion_establecimiento"
+    minlength="5"
+    maxlength="45"
+    required
+    placeholder="0115, Sur 3, Linares, Maule"
+  />
+
+</div>
+
+<div class="col-md-12" style="margin-bottom: 4%;">
+    <button type="submit" class="btn btn-primary">Añadir establecimiento</button>
+  </div>
+</form>

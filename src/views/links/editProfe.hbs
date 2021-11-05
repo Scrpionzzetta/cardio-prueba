@@ -1,0 +1,19 @@
+<form class="row g-3" action="/links/editProfe/{{new_edit_profesion.id_profesion}}" method="POST" style="margin-top: 3%;">
+<div class="col-md-12">
+  <label for="nombre_profesion" class="form-label">Indique el nombre de la profesión</label>
+  <input
+  value="{{new_edit_profesion.nombre_profesion}}"
+    type="text"
+    class="form-control"
+    name="nombre_profesion"
+    required
+    placeholder="Informatico"
+  />
+
+</div>
+
+
+<div class="col-md-12" style="margin-bottom: 4%;">
+    <button type="submit" class="btn btn-primary">Añadir profesión</button>
+</div>
+</form>

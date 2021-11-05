@@ -1,0 +1,2 @@
+con este comando ejecutamos el progrma:
+npm run dev
